@@ -4,6 +4,7 @@ import tensorflow as tf
 from iterator import Iterator
 from model import *
 from utils import *
+from sys import argv
 
 SEED = 3
 MAX_EPOCH = 10
@@ -67,4 +68,7 @@ def train(train_file = "data/train_data", test_file = "data/test_data", save_pat
                     train_accuracy_sum = 0.0
 
 if __name__ == "__main__":
-    train()
+    if len(argv) > 1:
+        train(model_type=argv[1])
+    else:
+        train()
