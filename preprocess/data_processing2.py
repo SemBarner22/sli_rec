@@ -24,10 +24,12 @@ def meta_preprocessing(meta_readfile, meta_writefile):
 def reviews_preprocessing(reviews_readfile, reviews_writefile):
     reviews_r = open(reviews_readfile, "r")
     reviews_w = open(reviews_writefile, "w")
+    print "sdasdsd"
     for line in reviews_r:
         line_new = eval(line)
         reviews_w.write(
             str(line_new["reviewerID"]) + "\t" + str(line_new["asin"]) + "\t" + str(line_new["unixReviewTime"]) + "\n")
+    print "fsdfsfsd"
     reviews_r.close()
     reviews_w.close()
 
@@ -128,9 +130,12 @@ if __name__ == "__main__":
     print
     "meta preprocessing..."
     meta_preprocessing(meta_readfile, meta_writefile)
+    print "xxx"
     print
     "reviews preprocessing..."
     reviews_preprocessing(reviews_readfile, reviews_writefile)
+    print "yyy"
     print
     "data processing..."
     negative_sampling(reviews_writefile, meta_writefile, ns_file, negative_sampling_value=1)
+    print "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
