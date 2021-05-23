@@ -5,12 +5,20 @@ import time
 
 def meta_preprocessing(meta_readfile, meta_writefile):
     meta_r = open(meta_readfile, "r")
+    print "ppp"
     meta_w = open(meta_writefile, "w")
+    print "qqq"
     for line in meta_r:
+        print "rrr"
         line_new = eval(line)
+        print "sss"
         meta_w.write(line_new["asin"] + "\t" + line_new["categories"][0][-1] + "\n")
+        print "ttt"
+    print "uuu"
     meta_r.close()
+    print "www"
     meta_w.close()
+    print "vvv"
 
 
 def reviews_preprocessing(reviews_readfile, reviews_writefile):
