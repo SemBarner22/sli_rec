@@ -103,12 +103,19 @@ def data_processing(input_file, output_file, negative_sampling_value=1):
 
 
 if __name__ == "__main__":
+    print "aaa"
     meta_readfile = "meta_Sports_and_Outdoors.json"
+    print "bbb"
     meta_writefile = "data/meta_information"
+    print "ccc"
     reviews_readfile = "reviews_Sports_and_Outdoors_5.json"
+    print "ddd"
     reviews_writefile = "data/reviews_information"
-    ns_file = "data/ns_data"
+    print "eee"
+    ns_file = "data/ns_data" 
+    print "fff"
     output_file = "data/preprocessed_data"
+    print "ggg"
 
     print
     "meta preprocessing..."
